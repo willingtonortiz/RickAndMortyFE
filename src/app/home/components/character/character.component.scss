@@ -1,0 +1,41 @@
+:host {
+	width: 300px;
+	border-radius: 7px;
+	border: 1px solid #bbbbbb;
+
+	.header {
+		padding: 16px;
+
+		.title,
+		.sub-title {
+			font-weight: normal;
+		}
+
+		.title {
+			font-size: 22px;
+		}
+
+		.sub-title {
+			font-size: 18px;
+		}
+	}
+
+	img {
+		width: 300px;
+	}
+
+	.content {
+		padding: 16px;
+
+		display: flex;
+		flex-flow: column nowrap;
+
+		.row {
+			margin: 8px 0;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+	}
+}

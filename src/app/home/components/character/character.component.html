@@ -1,0 +1,28 @@
+<header class="header">
+	<h1 class="title">{{ character.name }}</h1>
+	<h2 class="sub-title">{{ character.species }}</h2>
+</header>
+
+<img [src]="character.image" [alt]="'Image of ' + character.name" />
+
+<div class="content">
+	<div class="row">
+		<p>STATUS</p>
+		<p>{{ character.status }}</p>
+	</div>
+
+	<div class="row">
+		<p>GENDER</p>
+		<p>{{ character.gender }}</p>
+	</div>
+
+	<div class="row">
+		<p>ORIGIN</p>
+		<p>{{ character.origin.name }}</p>
+	</div>
+
+	<div class="row">
+		<p>LAST LOCATION</p>
+		<p>{{ character.location.name }}</p>
+	</div>
+</div>
