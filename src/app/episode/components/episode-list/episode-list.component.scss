@@ -1,0 +1,12 @@
+:host {
+	flex: 1;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+
+	app-episode {
+		margin: 16px;
+	}
+}

@@ -1,15 +1,28 @@
 import { State, Action, StateContext } from "@ngxs/store";
+
 import { CharacterHttpService } from "src/app/core/services";
 import { CharacterActions } from "./character.actions";
 
 export interface CharacterStateModel {
 	characters: Array<any>;
+	info: {
+		count: number;
+		pages: number;
+		next: any;
+		prev: any;
+	};
 }
 
 @State<CharacterStateModel>({
-	name: "characters",
+	name: "AppCharacters",
 	defaults: {
-		characters: []
+		characters: [],
+		info: {
+			count: 0,
+			pages: 0,
+			next: 0,
+			prev: 0
+		}
 	}
 })
 export class CharacterState {
@@ -17,15 +30,16 @@ export class CharacterState {
 
 	@Action(CharacterActions.FetchCharacters)
 	public async fetchCharacters(
-		{ getState, patchState, setState }: StateContext<CharacterStateModel>,
+		{ patchState }: StateContext<CharacterStateModel>,
 		{ page }: CharacterActions.FetchCharacters
 	) {
-		// const state = getState();
-
 		try {
 			const data = await this.characterHttpService.getCharacters(page);
+			const characters = data.characters;
+
 			patchState({
-				characters: data.characters.results
+				characters: characters.results,
+				info: characters.info
 			});
 		} catch (error) {
 			console.log("ERROR! ", error);

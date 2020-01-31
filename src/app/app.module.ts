@@ -16,6 +16,7 @@ import { AppComponent } from "./app.component";
 
 // States
 import { CharacterState } from "./store/characters/character.state";
+import { EpisodeState } from "./store/episodes/episode.state";
 
 @NgModule({
 	declarations: [AppComponent],
@@ -25,7 +26,7 @@ import { CharacterState } from "./store/characters/character.state";
 		GraphQLModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
-		NgxsModule.forRoot([CharacterState]),
+		NgxsModule.forRoot([CharacterState, EpisodeState]),
 		NgxsReduxDevtoolsPluginModule.forRoot()
 	],
 	providers: [],

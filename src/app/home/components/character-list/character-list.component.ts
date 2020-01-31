@@ -11,7 +11,9 @@ import { CharacterActions } from "../../../store/characters/character.actions";
 	styleUrls: ["./character-list.component.scss"]
 })
 export class CharacterListComponent implements OnInit {
-	@Select(state => state.characters.characters) characters$: Observable<any>;
+	@Select(state => state.AppCharacters.characters) characters$: Observable<
+		any
+	>;
 
 	constructor(private store: Store) {}
 

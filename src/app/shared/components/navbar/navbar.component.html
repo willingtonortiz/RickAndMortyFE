@@ -1,7 +1,9 @@
 <img [src]="'../../../../assets/images/rick_and_morty_logo.png'" class="logo" />
 
 <div class="buttons">
-	<button>CHARACTERS</button>
-	<button>LOCATIONS</button>
-	<button>EPISODES</button>
+	<button [routerLink]="['/characters']">
+		CHARACTERS
+	</button>
+	<button [routerLink]="['/episodes']">EPISODES</button>
+	<button [routerLink]="['/locations']">LOCATIONS</button>
 </div>

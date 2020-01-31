@@ -10,13 +10,15 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { LayoutComponent } from "./pages/layout/layout.component";
 import { PaginatorComponent } from "./components/paginator/paginator.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
 	imports: [
 		CommonModule,
 		MatToolbarModule,
 		MatButtonModule,
-		MatPaginatorModule
+		MatPaginatorModule,
+		RouterModule
 	],
 	declarations: [NavbarComponent, LayoutComponent, PaginatorComponent],
 	exports: [NavbarComponent, LayoutComponent, PaginatorComponent]

@@ -1,0 +1,12 @@
+<h1>{{ episode.episode }} - {{ episode.name }}</h1>
+
+<div class="info">
+	<div class="row">
+		<p>AIR DATE</p>
+		<p>{{ episode.air_date }}</p>
+	</div>
+</div>
+
+<div class="actions">
+	<button (click)="showCharacters(episode.id)">CHARACTERS</button>
+</div>
